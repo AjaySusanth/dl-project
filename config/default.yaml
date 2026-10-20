@@ -1,0 +1,47 @@
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  artifacts_dir: artifacts
+
+data:
+  months: ["2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06"]
+  min_duration_min: 1
+  max_duration_min: 180
+
+zones:
+  n_high: 6
+  n_medium: 6
+  n_low: 6
+  min_nonzero_hour_fraction: 0.5
+
+split:
+  fractions: [0.70, 0.15, 0.15]
+
+windows:
+  lookback: 168
+  horizon: 6
+  quantiles: [0.1, 0.5, 0.9]
+
+model:
+  hidden_size: 64
+  num_layers: 2
+  dropout: 0.2
+  zone_emb_dim: 8
+
+train:
+  lr: 0.001
+  batch_size: 256
+  max_epochs: 50
+  patience: 5
+  seeds: [0, 1, 2]
+  device: auto
+
+evaluation:
+  peak_percentile: 90
+
+fleet:
+  deadhead_min: 5
+  utilization: 0.7
+
+experiments:
+  lookbacks: [24, 168]
