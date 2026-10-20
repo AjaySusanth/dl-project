@@ -1,5 +1,5 @@
-data/
-artifacts/
+/data/
+/artifacts/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -7,4 +7,3 @@ __pycache__/
 .coverage
 htmlcov/
 .streamlit/
-
