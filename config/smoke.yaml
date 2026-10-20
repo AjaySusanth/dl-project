@@ -1,0 +1,11 @@
+data:
+  months: ["2026-01"]
+
+zones:
+  n_high: 2
+  n_medium: 2
+  n_low: 2
+
+train:
+  max_epochs: 2
+  seeds: [0]
